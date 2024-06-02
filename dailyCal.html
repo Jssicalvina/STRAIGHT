@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Straight</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script> -->
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">
+                <img src="logo-navbar.png" id="logo-navbar">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Calorie
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Daily Calories</a></li>
+                        <li><a class="dropdown-item" href="dietCal.html">Diet by Calories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <img src="img/bgrun.jpg" id="bg-run">
+    
+    <div class="container" id="formm">
+        <div class="row">
+            <!-- QUOTES -->
+            <div class="col-1" id="quote-div">
+                <div class="card">
+                    <div class="card-name">Quote of the month</div>
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 330 307" height="80" width="80">
+                            <path fill="currentColor" d="M302.258 176.221C320.678 176.221 329.889 185.432 329.889 203.853V278.764C329.889 297.185 320.678 306.395 302.258 306.395H231.031C212.61 306.395 203.399 297.185 203.399 278.764V203.853C203.399 160.871 207.902 123.415 216.908 91.4858C226.323 59.1472 244.539 30.902 271.556 6.75027C280.562 -1.02739 288.135 -2.05076 294.275 3.68014L321.906 29.4692C328.047 35.2001 326.614 42.1591 317.608 50.3461C303.69 62.6266 292.228 80.4334 283.223 103.766C274.626 126.69 270.328 150.842 270.328 176.221H302.258ZM99.629 176.221C118.05 176.221 127.26 185.432 127.26 203.853V278.764C127.26 297.185 118.05 306.395 99.629 306.395H28.402C9.98126 306.395 0.770874 297.185 0.770874 278.764V203.853C0.770874 160.871 5.27373 123.415 14.2794 91.4858C23.6945 59.1472 41.9106 30.902 68.9277 6.75027C77.9335 -1.02739 85.5064 -2.05076 91.6467 3.68014L119.278 29.4692C125.418 35.2001 123.985 42.1591 114.98 50.3461C101.062 62.6266 89.6 80.4334 80.5942 103.766C71.9979 126.69 67.6997 150.842 67.6997 176.221H99.629Z"></path>
+                        </svg>
+                    </div>
+                    <div class="body-text">Run into your unknown.</div>
+                    <div class="author">
+                        - by Becs Gentry
+                    </div>
+                </div>
+            </div>  
+            <!-- FORM -->
+            <div class="col">
+                <div class="container text-center" id="content-home">
+                    <div class="row">
+                        <!-- gender -->
+                        <div class="col-2">
+                            <p>Gender : </p>
+                        </div>
+                        <!-- select -->
+                        <div class="col">
+                            <select id="input-step-home" class="genderr" style="height: 42px;">
+                                <option value="">Select gender</option>
+                                <option value="man">Man</option>
+                                <option value="woman">Woman</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- BERAT BADAN -->
+                    <div class="row">
+                        <!-- weight -->
+                        <div class="col-2">
+                            <form action="">
+                                <p>Weight (kg) : </p>
+                            </form>
+                        </div>
+                        <!-- isi -->
+                        <div class="col">
+                            <input id="input-step-home" type="number" placeholder="Enter your weight..." class="input-weight">    
+                        </div>
+                    </div>
+                    <!-- TINGGI BADAN -->
+                    <div class="row">
+                        <!-- height -->
+                        <div class="col-2">
+                            <form action="">
+                                <p>Height (cm) : </p>
+                            </form>
+                        </div>
+                        <!-- isi -->
+                        <div class="col">
+                            <input id="input-step-home" type="number" placeholder="Enter your height..." class="input-height">    
+                        </div>
+                    </div>
+                    <!-- USIA -->
+                    <div class="row">
+                        <!-- age -->
+                        <div class="col-2">
+                            <form action="">
+                                <p>Age : </p>
+                            </form>
+                        </div>
+                        <!-- isi -->
+                        <div class="col">
+                            <input id="input-step-home" type="number" placeholder="Enter your age..." class="input-age">    
+                        </div>
+                    </div>
+                    
+                    <button id="b-submit" type="button">Submit</button>
+
+                    <div id="result"><strong>? ? ?</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#b-submit").click(function() {
+            var gender = $(".genderr").val();
+            var weight = $(".input-weight").val();
+            var height = $(".input-height").val();
+            var age = $(".input-age").val();
+            
+            if (gender == 'man'){
+                var hasil = 88.362 + (13.397 * weight) + (4.779 * height) - (5.677 * age);
+                var hasil1 = hasil * 1.55
+                $("#result").html(hasil1.toFixed(2) + " calories") ;
+            }
+            else{
+                var hasil = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+                var hasil1 = hasil * 1.55
+                $("#result").html(hasil1.toFixed(2) + " calories") ;
+            }
+        });
+    </script>
+ 
+
+</body>
+</html>

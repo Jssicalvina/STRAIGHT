@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Straight</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script> -->
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">
+                <img src="logo-navbar.png" id="logo-navbar">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Calorie
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="dailyCal.html">Daily Calories</a></li>
+                        <li><a class="dropdown-item" href="dietCal.html">Diet by Calories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <!-- <button class="btn btn-outline-success" type="submit">Login</button> -->
+    
+            </div>
+    
+        </div>
+    
+    </nav>
+
+    <img src="img/bghome.jpg" id="bg-home">
+
+    <h4 id="welcome">Welcome Straight People!</h4>
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+              <img src="img/prudential.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" id="teks-card">8 Rekomendasi Makanan untuk Diet yang Patut Dicoba</h5>
+                <a href="https://www.prudential.co.id/id/pulse/article/8-rekomendasi-makanan-untuk-diet-yang-patut-dicoba/ " 
+                  target="_blank"><button id = "button">prudential</button></a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+              <img src="img/siloam.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" id="teks-card">9 Makanan Rendah Kalori untuk Diet yang Kaya Nutrisi</h5>
+                <a href="https://www.siloamhospitals.com/informasi-siloam/artikel/makanan-rendah-kalori-untuk-diet " 
+                  target="_blank"><button id = "button">siloamhospitals</button></a>
+              </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+              <img class="haloimg" src="img/halodoc.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title" id="teks-card">Tips dan Menu Diet Sehat 30 Hari untuk Turunkan Berat Badan</h5>
+                <a href="https://www.halodoc.com/artikel/tips-dan-menu-diet-sehat-30-hari-untuk-turunkan-berat-badan " 
+                  target="_blank" ><button id = "button">halodoc</button></a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
